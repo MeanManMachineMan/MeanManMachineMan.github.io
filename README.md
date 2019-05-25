@@ -1,1 +1,1 @@
-A repository for the solutions to the Coursera course on building single-page wbe applications using AngularJS
+A repository for the solutions to the Coursera course on building single-page web applications using AngularJS
