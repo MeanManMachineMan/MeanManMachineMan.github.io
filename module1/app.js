@@ -13,12 +13,10 @@ function lccontrol($scope){
 		else{
 			var words = $scope.list.split(',');
 			var a = words.length;
-			console.log(words)
 			words.forEach(function(item){ 
 				if(item =="")
 					a -= 1
 				});
-			console.log(a)
 			if(a <= 3)
 				$scope.output = "Enjoy!"
 			else
