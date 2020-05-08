@@ -1,0 +1,5 @@
+<div class="res">
+    <ol>
+    	<li class="items" ng-repeat="item in menuitems track by $index">{{item}}<button class="btn btn-danger"style="margin-left: 10px;" ng-click="delete({index: $index})">Don't want this one!</button></li>
+    </ol>
+</div>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+  </head>
+<body ng-app="NarrowItDownApp">
+  <div class="container" ng-controller="NarrowItDownController as nit">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div class="form-group">
+      <input type="text" placeholder="search term" class="form-control" ng-model = "searchTerm">
+    </div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary" ng-click="nit.findItems()">Narrow It Down For Me!</button>
+    </div>
+    <p class="res" ng-if="validInput">Nothing found!</p>
+    <found-items menuitems="found" del-item="nit.deleteItem(index)" ng-if="!validInput"></found-items>
+  </div>
+
+</body>
+</html>
